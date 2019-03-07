@@ -4,7 +4,7 @@ const demiumAPI = "http://52.213.25.226:3030/";
 // MY API
 const myAPI = "http://localhost:8585/";
 
-const herokuAPI = "https://newbackdemium.herokuapp.com/";
+const herokuAPI = "https://demiumback.herokuapp.com/";
 
 export const URL = herokuAPI;
 
