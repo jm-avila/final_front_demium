@@ -15,7 +15,7 @@ const cityReducer = (state = defaultState, action) => {
     case UPDATE_CITY:
       return [
         ...state.filter(city => city._id !== action.payload.id),
-        action.payload.updatedCity
+        { _id: action.payload.id, ...action.payload.updatedCity }
       ];
     case ADD_CITY:
       return [...state, { _id: action.payload.id, ...action.payload.newCity }];

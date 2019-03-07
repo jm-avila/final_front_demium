@@ -15,7 +15,7 @@ const teamReducer = (state = defaultState, action) => {
     case UPDATE_TEAM:
       return [
         ...state.filter(team => team._id !== action.payload.id),
-        action.payload.updatedTeam
+        { _id: action.payload.id, ...action.payload.updatedTeam }
       ];
     case ADD_TEAMS:
       return [...state, { _id: action.payload.id, ...action.payload.newTeam }];

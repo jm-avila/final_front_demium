@@ -15,7 +15,7 @@ const ideaReducer = (state = defaultState, action) => {
     case UPDATE_IDEA:
       return [
         ...state.filter(idea => idea._id !== action.payload.id),
-        action.payload.updatedIdea
+        { _id: action.payload.id, ...action.payload.updatedIdea }
       ];
     case ADD_IDEAS:
       return [...state, { _id: action.payload.id, ...action.payload.newIdea }];
