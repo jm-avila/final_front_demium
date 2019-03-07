@@ -6,7 +6,7 @@ const myAPI = "http://localhost:8585/";
 
 const herokuAPI = "https://newbackdemium.herokuapp.com/";
 
-export const URL = myAPI;
+export const URL = herokuAPI;
 
 /*
   loginDEMAPI = {
